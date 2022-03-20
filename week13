@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin-left: 150px;
+        }
+        
+        .button-page{
+            color: #fff; 
+            text-decoration: none; 
+            user-select: none; 
+            background: rgb(28, 202, 121); 
+            padding: .7em 1.5em;
+            font-size: 18px;
+            border: none;
+            margin-bottom: 80px;
+        } 
+        .button-page:hover { background: rgb(16, 161, 72); } 
+        .button-page:active { background: rgb(16, 161, 72); }
+
+        .calc {
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            margin: 0;
+        }
+        .calc button {
+            background-color: rgb(245, 88, 88);
+            margin-bottom: 25px;
+            color: #fff; 
+            text-decoration: none; 
+            user-select: none; 
+            padding: .7em 1.5em;
+            font-size: 18px;
+            border: none;
+        }
+        .calc button:hover { background: rgb(235, 49, 49); } 
+        .calc button:active { background: rgb(235, 49, 49);}
+        .calc button:visited { background: rgb(235, 49, 49);}
+    </style>
+</head>
+<body>
+    <h1 style="color:rgb(80, 80, 80)">Задание week 13</h1>
+    <h2 style="color: rgb(87, 86, 86);">Давай познакомимся:</h2>
+    <button class="button-page" onclick="question()">Нажми на кнопку </button>
+    <h2 style="color: rgb(77, 75, 76);">Калькулятор</h2>
+    <div class="calc">
+        
+        <button class="" onclick="plus()">+ </button>
+        <button class="" onclick="minus()">- </button>
+        <button class="" onclick="dividing()">/ </button>
+        <button class="" onclick="multiply()">* </button>
+
+    </div>
+
+
+    <script type="text/javascript">
+        
+    function question() {
+        name = prompt('Как тебя зовут?');
+        alert(`Привет, ${name}`);
+    }
+
+    function plus() {
+        let a = prompt("Введите первое число");
+        let b = prompt("Введите второе число");
+        let sum = Number(a) + Number(b);
+        alert(`Ваш ответ: ${sum}`);
+    }
+
+    function minus() {
+        let a = prompt("Введите первое число");
+        let b = prompt("Введите второе число");
+        let min = Number(a) - Number(b);
+        alert(`Ваш ответ: ${min}`);
+    }
+
+    function dividing() {
+        let a = prompt("Введите первое число");
+        let b = prompt("Введите второе число");
+        let dividing = Number(a) / Number(b);
+        alert(`Ваш ответ: ${dividing}`);
+    }
+
+    function multiply() {
+        let a = prompt("Введите первое число");
+        let b = prompt("Введите второе число");
+        let multiply = Number(a) * Number(b);
+        alert(`Ваш ответ: ${multiply}`);
+    }
+
+    </script>
+</body>
+</html>
