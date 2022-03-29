@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin-left: 150px;
+        }
+        
+        .button-page{
+            color: #fff; 
+            text-decoration: none; 
+            user-select: none; 
+            background: rgb(28, 202, 121); 
+            padding: .7em 1.5em;
+            font-size: 18px;
+            border: none;
+            margin-bottom: 80px;
+        } 
+        .button-page:hover { background: rgb(16, 161, 72); } 
+        .button-page:active { background: rgb(16, 161, 72); }
+
+        .calc {
+            display: flex;
+            
+            flex-direction: column;
+            width: 400px;
+            margin: 0;
+        }
+        .calc-buttons__math {
+            background-color: rgb(245, 88, 88);
+            color: #fff; 
+            text-decoration: none; 
+            user-select: none; 
+            padding: .7em 1.5em;
+            font-size: 18px;
+            border: none;
+            text-align: center;
+            margin-left: 18px;
+        }
+        .calc-buttons__math:hover { background: rgb(235, 49, 49); } 
+        .calc-buttons__math:active { background: rgb(235, 49, 49);}
+        .calc-buttons__math:visited { background: rgb(235, 49, 49);}
+
+        .first-number,
+        .second-number{
+            border: 1px solid grey;
+            color: rgb(34, 33, 33); 
+            text-decoration: none; 
+            user-select: none; 
+            padding: 10px;
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            width: 150px;
+        }
+        ::placeholder {
+            color: rgb(126, 126, 126);
+            font-size: 14px;
+            margin: 0;
+        }
+        .result {
+            display: flex;
+            font-size: 22px;
+        }
+
+        .result-number {
+            margin-left: 20px;
+        }
+
+        .change-background {
+            background-color: rgb(151, 185, 247);
+            font-size: 20px;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+            
+        }
+        .week14 {
+            display: flex;
+            justify-content: space-around;
+        }
+        .gallery{
+            margin-top: 150px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 10px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="week14">
+        <div class="left">
+            <h1 style="color:rgb(80, 80, 80)">Задание week 13-14</h1>
+            <h2 style="color: rgb(87, 86, 86);">Давай познакомимся:</h2>
+            <button class="button-page" onclick="buttonName()">Нажми на кнопку </button>
+            <h2 style="color: rgb(77, 75, 76);">Калькулятор</h2>
+            <div class="calc">
+                <div class="calc-enter">
+                    <input type="text" id="n1" class="first-number" placeholder='Введите первое число'>
+                    <input type="text" id="n2" class="second-number" placeholder='Введите второе число'>
+                </div>    
+                <div class="calc-buttons">
+                    <button class="calc-buttons__math" onclick="plus()">+ </button>
+                    <button class="calc-buttons__math" onclick="minus()">- </button>
+                    <button class="calc-buttons__math" onclick="divide()">/ </button>
+                    <button class="calc-buttons__math" onclick="muliply()">* </button>
+                </div>
+            </div>
+            
+            <div class="result">
+                <p class="">Ответ: </p>
+                <p id="out" class="result-number"></p>
+            </div>
+            <div id='blue' class="change-background" onclick="changeColor()">Смена фона div по клику</div>
+        </div>
+        <div class="gallery">
+            <img id="pandaImage" src="animal1.jpg" alt="" >
+            <div class="buttons">
+                <button oneclick='changeBack()'>Назад</button>
+                <button onclick="changeMe()">Вперед</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        
+    const buttonName = () => {
+        name = prompt('Как тебя зовут?');
+        alert(`Привет, ${name}`);
+    }
+    //------------------------WEEK 14 Калькулятор------------------------
+    function plus () {
+        let num1, num2, result; // объявляем переменные
+        num1 = document.getElementById('n1').value;  // получаем наши значения первого числа
+        num1 = Number(num1);       //преобразуем нашу строку в число
+        
+
+        num2 = document.getElementById('n2').value;
+        num2 = Number(num2);
+
+        result = num1 + num2;  //запишем переменную result в которой будем складывать переменные
+
+        // получаем значение p с ответом и записываем туда значение
+        // воспользуемся document и получим по id наш элемент и воспользуемся методом innerHTML
+        //и запишим переменную result 
+        document.getElementById('out').innerHTML = result;
+    } 
+
+    function minus () {
+        let num1, num2, result; 
+        num1 = document.getElementById('n1').value;  
+        num1 = Number(num1);        
+        
+        num2 = document.getElementById('n2').value;
+        num2 = Number(num2);
+
+        result = num1 - num2;  
+
+        document.getElementById('out').innerHTML = result;
+    }
+
+    function divide () {
+        let num1, num2, result; 
+        num1 = document.getElementById('n1').value;  
+        num1 = Number(num1);        
+        
+        num2 = document.getElementById('n2').value;
+        num2 = Number(num2);
+
+        result = num1 / num2;  
+
+        document.getElementById('out').innerHTML = result;
+    }
+
+    function muliply () {
+        let num1, num2, result; 
+        num1 = document.getElementById('n1').value;  
+        num1 = Number(num1);        
+        
+        num2 = document.getElementById('n2').value;
+        num2 = Number(num2);
+
+        result = num1 * num2;  
+
+        document.getElementById('out').innerHTML = result;
+    }
+
+    //---------------------Change color div------------------
+
+    function changeColor() {
+        let elem = document.getElementById('blue');
+        elem.style.background = 'red';
+    }
+
+    //----------------------Gallery--------------------------
+
+    function changeMe() {
+        let pandaImage = document.getElementById('pandaImage');
+        pandaImage.src = 'animal2.jpg';
+    }
+    function changeBack() {
+        let pandaImage = document.getElementById('pandaImage');
+        pandaImage.src = 'animal1.jpg';
+    }
+
+
+
+
+
+
+    //--------------- WEEK 13--------------------------------
+
+    /* function question() {
+        name = prompt('Как тебя зовут?');
+        alert(`Привет, ${name}`);
+    } */
+
+    // --------------------------Калькулятор------------------
+
+    /* function plus() {
+        let a = prompt("Введите первое число");
+        let b = prompt("Введите второе число");
+        let sum = Number(a) + Number(b);
+        alert(`Ваш ответ: ${sum}`);
+    }
+
+    function minus() {
+        let a = prompt("Введите первое число");
+        let b = prompt("Введите второе число");
+        let min = Number(a) - Number(b);
+        alert(`Ваш ответ: ${min}`);
+    }
+
+    function divide() {
+        let a = prompt("Введите первое число");
+        let b = prompt("Введите второе число");
+        let div = Number(a) / Number(b);
+        alert(`Ваш ответ: ${div}`);
+    }
+
+    function times() {
+        let a = prompt("Введите первое число");
+        let b = prompt("Введите второе число");
+        let times = Number(a) * Number(b);
+        alert(`Ваш ответ: ${times}`);
+    } */
+
+    </script>
+</body>
+</html>
