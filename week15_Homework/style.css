@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.background-container {
+    margin-left: 300px;
+}
+
+.wrapper {
+    border: 0.5px solid rgb(100, 100, 100);
+    width: 430px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.form-container {
+    margin-left: 15px;
+    
+}
+
+h1
+h2 {
+    text-align: center;
+}
+
+.name-surname-block {
+    display: flex;
+}
+
+.title {
+    font-size: 13px;
+    color: rgb(149, 150, 150);
+}
+
+.name__title {
+    width: 200px;
+    
+}
+.name__input {
+    width: 180px;
+    height: 32px;
+}
+.surname__title {
+    margin-left: 10px;
+    
+}
+.surname__input {
+    height: 32px;
+    width: 178px;
+}
+
+.gender-container {
+    margin-top: 15px;
+}
+
+.radio-button {
+    display: flex;
+    margin-top: 5px;
+}
+
+.radio-button input {
+    vertical-align: middle;
+    margin: -2px 0 0 0;
+}
+
+.radio-button__woman{
+    margin-left: 15px;
+}
+
+.email-container {
+    margin-top: 15px;
+}
+
+.name-email-block {
+    display: flex;
+}
+
+.name-email__input {
+    width: 244px;
+    height: 32px;
+}
+
+.select-email {
+    margin-left: 10px;
+    height: 38px;
+    padding: 5px;
+    width: 130px;
+}
+
+.password {
+    margin-top: 15px;
+}
+
+.password__input {
+    height: 32px;
+    width: 385px;
+}
+
+.number {
+    margin-top: 15px;
+}
+
+.number__input {
+    height: 32px;
+    width: 385px;
+}
+
+.hobby {
+    margin-top: 15px;
+}
+
+.hobby-block {
+    display: flex;
+    margin-top: 5px;
+    
+}
+
+.block__centre {
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.block__right {
+    margin-left: 40px;
+}
+
+.button {
+    background-color: rgb(31, 123, 243);
+    border: none;
+    margin-top: 20px;
+    height: 42px;
+    width: 400px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+} 
+
+.error-message {
+    text-align: center;
+    margin-top: 30px;
+    color: red;
+}
+
+.hello-message {
+    text-align: center;
+    margin-top: 30px;
+    color: rgb(3, 148, 68);
+}
+
+/*-------------Калькулятор--------------------*/
+.calc {
+    display: flex;
+    
+    flex-direction: column;
+    width: 600px;
+    margin: 0;
+}
+.calc-buttons__math {
+    background-color: rgb(245, 88, 88);
+    color: #fff; 
+    text-decoration: none; 
+    user-select: none; 
+    padding: .7em 1.5em;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    margin-left: 18px;
+    margin-top: 20px;
+}
+.calc-buttons__math:hover { background: rgb(235, 49, 49); } 
+.calc-buttons__math:active { background: rgb(235, 49, 49);}
+.calc-buttons__math:visited { background: rgb(235, 49, 49);}
+
+.calc-clear {
+    background-color: rgb(252, 187, 8);
+    color: #fff; 
+    text-decoration: none; 
+    user-select: none; 
+    padding: .7em 1.5em;
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    margin-left: 18px;
+}
+
+.calc-clear:hover { background: rgb(211, 128, 3); } 
+.calc-clear:active { background: rgb(211, 128, 3);}
+.calc-clear:visited { background: rgb(211, 128, 3);}
+
+.first-number,
+.second-number{
+    border: 1px solid grey;
+    color: rgb(34, 33, 33); 
+    text-decoration: none; 
+    user-select: none; 
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 150px;
+}
+::placeholder {
+    color: rgb(126, 126, 126);
+    font-size: 14px;
+    margin: 0;
+}
+.result {
+    display: flex;
+    font-size: 22px;
+}
+
+.result-number {
+    margin-left: 20px;
+}
+
+#errorDivide {
+    color: red;
+}
+
+.calc-wrapper {
+    margin-top: 30px;
+    margin-left: 450px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 600px;
+}
+
+.calc-container {
+    text-align: center;
+}
+.result {
+    margin-left: 250px;
+}
