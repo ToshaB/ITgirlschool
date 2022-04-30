@@ -1,0 +1,86 @@
+body {
+    font-family: Geneva, Tahoma, sans-serif;
+    
+} 
+#question {
+    text-align: center;
+}
+
+.task {
+    width: 400px;
+}
+
+ul,
+ol {
+    width: 400px;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.container-calc-auto {
+    margin-left: 300px;
+    border: 1px solid red;
+    border-radius: 5px;
+    width: 400px;
+    height: 400px;
+    
+}
+
+.form-container {
+    margin-left: 40px;
+    
+}
+
+h3 {
+    height: 35px;
+    background-color: rgb(224, 15, 15);
+    margin-top: 0;
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+.model-container {
+    height: 100px;
+}
+
+.age-container,
+.mileage-container {
+    height:100px;
+}
+
+.year-container{
+    display: flex;
+}
+
+.year-number {
+    width: 60px;
+}
+.type-container {
+    display: flex;
+}
+.type-block {
+    display: flex;
+    
+}
+.block-radio {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-container {
+    display: flex;
+}
+.age-box{
+    display: flex;
+    flex-direction: column;
+}
+
+#count {
+    width: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}

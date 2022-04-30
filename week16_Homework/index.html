@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Week 16</h2>
+    <div class="wrapper">
+        <div class="container-task">
+            <ul class="task">
+                <h4>Задание 1. Напишите функцию `sumInput()`, которая:</h4>
+                <li>Просит пользователя ввести значения, используя `prompt` и сохраняет их в массив</li>
+                <li>Заканчивает запрашивать значения, когда пользователь введёт не числовое значение, пустую строку или нажмёт «Отмена»</li>
+                <li>Выводит получившийся массив в отсортированном по возрастанию виде</li>
+                <li>Подсчитывает и возвращает сумму элементов массива</li>
+            </ul>
+            <button id="question" onclick="sumInput()">Введите значение</button>
+            <ol>
+                <h4>Задание 3. Задачи с массивами:</h4>
+                <li>Дан массив ['js', 'css', 'html']. Выведите на экран первый элемент.</li>
+                <br>
+                <button onclick="first();">Решение</button>
+                <br>
+                <br>
+                <li>Отфильтруйте массив [0, 1, false, 2, undefined, '', 3, null] от нежелательных значений, таких как false, undefined, пустые строки, ноль, null с помощью метода filter.  Ожидаемый результат: [1, 2, 3]</li>
+                <br>
+                <button onclick="second();">Решение</button>
+                <br>
+                <br>
+                <li>Дан массив [[1,2], [1,2,3], [1,2,3,4]]. Найдите индекс массива, длина которого > 3.</li>
+                <br>
+                <button onclick="third();">Решение</button>
+            </ol>
+        </div>
+        <!------------- Калькулятор стоимости автомобиля --------------->
+        <div class="container-calc-auto">
+                <h3>Калькулятор стоимости автомобиля</h3>
+                <div class="form-container">
+                    <div class="model-container">
+                        <label class="model-car">Марка автомобиля:
+                        <select onchange="calc()" id="type_model">
+                            <option value="0">Выбрать автомобиль</option>
+                            <option value="300000">Audi</option>
+                            <option value="400000">Ford</option>
+                            <option value="500000">BMW</option>
+                        </select>
+                        </label>
+                    </div>   
+                    <div class="age-container">Возраст автомобиля:
+                        <div class="age-box">
+                            <div class="">
+                                <input type="radio" onchange="calc()" value="300000" id="type_age_new" name='car'/>
+                                <label for="type_age_new">меньше 5 лет</label>
+                            </div>
+                            <div class="">
+                                <input type="radio" onchange="calc()" value="250000" id="type_age_middle" name='car' />
+                                <label for="type_age_middle">от 5 до 8 лет</label>
+                            </div>
+                            <div class="">
+                                <input type="radio" onchange="calc()" value="200000" id="type_age_large" name='car' />
+                                <label for="type_age_large">больше 8 лет</label>
+                            </div>
+                        </div>  
+                    </div> 
+                    <div class="mileage-container">Пробег
+                        <input type="text" id="count" value="1" onchange="calc()" /> км.
+                    </div>
+                    <div>Стоимость автомобиля: <span id="result">0</span> руб.</div>
+                </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
